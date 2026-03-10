@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3efe8;
+  color: #1f1f1f;
+}
+
+.topbar {
+  width: 100%;
+  background: #1f1f1f;
+  color: white;
+  padding: 16px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.topbar-left {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #3a3a3a;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.badge.light {
+  background: #d8d2c8;
+  color: #1f1f1f;
+}
+
+.topbar-center {
+  justify-self: center;
+}
+
+.code-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.slots {
+  display: flex;
+  gap: 8px;
+}
+
+.slot {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #f7f4ef;
+  color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid #cfc6ba;
+}
+
+.timer-box {
+  text-align: right;
+}
+
+.timer-label {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+#timer {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 980px;
+  margin: 30px auto;
+  padding: 0 20px 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.intro-box {
+  background: #f7f4ef;
+  border-left: 5px solid #1f1f1f;
+  padding: 16px;
+  margin: 18px 0;
+  border-radius: 10px;
+}
+
+.room-label {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #ece6dc;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+button {
+  background: #1f1f1f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+button.option-btn {
+  width: 100%;
+  text-align: left;
+  background: white;
+  color: #1f1f1f;
+  border: 1px solid #cfc6ba;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+button.option-btn.selected {
+  background: #1f1f1f;
+  color: white;
+  border-color: #1f1f1f;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #cfc6ba;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.option-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.code-box,
+.source-box,
+.task-box,
+.clue-box,
+.hint-box,
+.success-box {
+  background: #f7f4ef;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 16px 0;
+}
+
+.code-box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.task-box {
+  border-left: 5px solid #6a6257;
+}
+
+.clue-box {
+  border-left: 5px solid #1f1f1f;
+}
+
+.hint-box {
+  border-left: 5px solid #c97d00;
+  background: #fff6e8;
+}
+
+.success-box {
+  border-left: 5px solid #1f7a35;
+  background: #eefaf1;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.progress {
+  margin-top: 20px;
+  background: #e6dfd5;
+  border-radius: 999px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #1f1f1f;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.meta {
+  margin-top: 10px;
+  color: #5c564d;
+  font-size: 0.95rem;
+}
+
+.feedback-good {
+  color: #165c27;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.feedback-bad {
+  color: #8d1f1f;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.list {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+.center {
+  text-align: center;
+}
+
+.final-code-input {
+  max-width: 220px;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 10px;
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .topbar-center {
+    justify-self: start;
+  }
+
+  .timer-box {
+    text-align: left;
+  }
+}
